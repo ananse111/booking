@@ -1,0 +1,242 @@
+
+body{
+    
+}
+.hdcont{
+   
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100px;
+    justify-content: center;
+   
+}
+
+.hd {
+   
+    background-color: white;
+    height: 150px;
+    width: 100%;
+    position: fixed;
+    border-bottom: gold solid 4px ,black solid 2px;
+    background-image: url(../images/logo.png);
+    background-repeat: no-repeat;   
+}
+.hd ul li{
+    text-decoration: none;
+    display: inline;
+    float: right;
+    text-align: right;
+    font-family: sans-serif;
+    font-weight: 900px;
+    font-size: 18px;
+    padding-top: 50px;
+    padding-left: 10px;
+}
+.main{
+    background-image: url(/images/restaurant-1.jpg);
+    height: 1030px;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: 1500px;
+   
+}
+.picont{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 500px auto;
+    width: 90%;
+    height: 330px;
+    background-color: rgba(255, 255, 255, 0.822);
+}
+.wrapper{
+    display: flex;
+    height: 100%;
+    width: 100;
+}
+.pic{
+    display: flex;
+    background-image: url(/images/hotelfront.jpg);
+    width: 37%;
+    height: 400px;
+    background-size: 300px;
+    margin: 10px 60px 20px 10px;
+    transition: 0.8s;
+    background-repeat: no-repeat;
+
+}
+.state{
+   
+    justify-content: center;
+    margin: 20px auto;
+    width: 30%;
+    height: 300px;
+   /* background-color: rgba(245, 222, 179, 0.671);
+   */
+}
+h1{
+    text-align: center;
+}
+h4{
+    text-align: justify;
+    font-size: 14px;
+}
+.btn{
+   border: 1px solid rgb(255, 127, 148);
+    padding: 5px 30px 5px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.8s;
+    position: relative;
+    overflow: hidden;
+    color: rgb(129, 90, 90);
+       
+}
+.btn1{
+    display: flex;
+    justify-content: center;
+}
+.btn:hover{
+    background-color: rgb(77, 184, 139);
+    
+}
+
+.footi{
+    display: flex;
+    height: 50px;
+    width: 99.6%;
+    background-color: black;
+    margin: 0px;
+    border: gold solid 3px;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+
+  
+}
+.bg
+{
+    background-color:rgba(0,0,0,0.70);
+    width: 100%;
+    height: 1030px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    display: none;
+}
+.bgcont{
+    background-color: rgb(170, 156, 156);
+    height: 700px;
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: gold solid 2px;
+    justify-content: space-evenly;
+    position: relative;
+}
+.room{
+    display: flex;
+    border: gold solid 1px;
+    height: 120px;
+    width: 90%;
+    background-color: rgb(236, 197, 197);
+    border-radius: 5px;
+}
+.ima{
+    background-image: url(images/bedroom-1.jpg);
+    height: 100%;
+    width: 45%;
+    background-size: cover;
+    
+}
+.ima1{
+    background-image: url(images/bedroom-4.jpg);
+    height: 100%;
+    width: 45%;
+    background-size: cover;
+    
+}
+.ima2{
+    background-image: url(images/bedroom-5.jpg);
+    height: 100%;
+    width: 45%;
+    background-size: cover;
+    
+}
+.ima3{
+    background-image: url(images/bedroom-3.jpg);
+    height: 100%;
+    width: 45%;
+    background-size: cover;
+    
+}
+.content
+{
+    height: 18%;
+    width: 85%;
+    text-align: center;
+   
+}
+p h4{
+    text-align: center;
+   
+}
+.but{
+    border: 1px solid rgb(255, 127, 148);
+     padding: 5px 30px 5px 30px;
+     border-radius: 5px;
+     cursor: pointer;
+     transition: 0.8s;
+     position: relative;
+     overflow: hidden;
+        
+ }
+ .btn2{
+     display: flex;
+     justify-content: center;
+ }
+ .but:hover{
+    background-color: rgb(230, 226, 39);
+}
+.close{
+    position: absolute;
+    top: 0;
+    right: 14px;
+    cursor: pointer;
+}
+.close:hover{
+    color: yellow;
+}
+@media  screen and (max-width: 600px){
+    .hd{flex-direction: column;
+       
+    }
+    .state h4 {
+        font-size: 8px;
+          
+    }
+   
+    .picont{
+        display: flex;
+        flex-direction: column;
+        height: 500px;
+    }
+    .room{
+        height: 200px;
+    }
+    .pic{
+        margin: 50px auto;
+        width: 120px;
+        height: 120px;
+        background-size: cover;
+    }
+    .hd{
+        height: 80px;
+        width: 100%;
+        background-size: cover;
+    }
+
+}
