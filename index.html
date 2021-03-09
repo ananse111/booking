@@ -1,87 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="bookstyle.css">
 </head>
+
 <body>
-    <div class="main">
-        <div class="hdcont">
-        <div class="hd">
-           
-                <ul>
-                    
-                    <li>ABOUT US</li>
-                    <li>PHOTOS</li>
-                    <li>CONTACT</li>
-                    <li>OUR SERVICES</li>
-                    <li>HOME</li>
-                </ul>
-           
+    <div class="book1">
+        <div class="imag"><img src="images/images/hotelfront.jpg" alt="" id="foto1" price='200'
+                style="max-width: 100%;"></div>
+        <button onclick="book()" id="btn">BOOK</button>
+
+        <div id="check">
+            <label for=""> Name <input id="name" placeholder="Enter your name" type="text"></label>
+            <br>
+            <label for=""> check in <input type="date" id="ci"></label>
+            <br>
+
+            <label for=""> check out<input type="date" id="co"></label>
+            <br>
+            <button onclick="confirme()" id="reserve"> CONFIRM</button>
+
         </div>
+        
+        <div id="room" class="room">
+
+            <div class="ima"></div>
+
+            <h3>EXECUTIVE SUITE</h3>
+            King size bed, breakfast in bed, free massage <p>$ 600</p>
+            <div id="btn0" class="btn0"><button onclick="book0()" class="but">BOOK</button></div>
+
+        </div>
+        
+            <div id="room1" class="room">
+
+                <div class="ima"></div>
+
+                <h3>EXECUTIVE SUITE</h3>
+                King size bed, breakfast in bed, free massage <p>$ 600</p>
+                <div class="btn1"><button class="but">BOOK</button></div>
+
+            </div>
+            <div id="room2" class="room">
+
+                <div class="ima"></div>
+
+                <h3>EXECUTIVE SUITE</h3>
+                King size bed, breakfast in bed, free massage <p>$ 600</p>
+                <div class="btn2"><button class="but">BOOK</button></div>
+
+            </div>
+            <div id="dis" style="position: absolute; top: 7px;"> <button onclick="bak()" id="back">back</button> </div>
+            <div id="disp"></div>
+        </div>
+        
     </div>
-    <div class="picont">
-        <div class="wrapper">
-        <div class="pic"></div>
-        <div class="state"> <p><h1><span>Affordable Luxury in Accra</span></h1></p><br>
-           <p> <h4>Either in Accra for a vacation or business, Rixos hotel is the perfect place to stay. Rixos has unique collections of luxurious serviced apartments with excellent hotel amenities in most prestigious areas in Accra: Airport, Cantonments, East Legon and Labone.
+
+
+    <script>
+        var body = document.getElementsByTagName('body')
+        if (/android|webOS|iPhone|iPad/i.test(navigator.userAgent)){
             
-            Read more...</h4></p>
-            <div class="btn1">
-        <button id="bn" class="btn">BOOK</button>
-    </div>
-        </div>
-        </div>
-    </div>
-    <div class="bg">
-        <div class="bgcont">
-          <div class="close">lose</div>
+        }
+        else{
+            body[0].innerHTML =''
+        }
+       
+        var disp = document.getElementById('disp')
+        var back = document.getElementById('back')
+        var dis = document.getElementById('dis')
+        var name = document.getElementById('name')
+        var room = document.getElementById('room')
+        var room1 = document.getElementById('room1')
+        var room2 = document.getElementById('room2')
+        var btn = document.getElementById('btn')
+        var btn0 = document.getElementById('btn0')
+        var btn1 = document.getElementById('btn1')
+        var btn2 = document.getElementById('btn2')
+        var checkin = document.getElementById('check')
+        checkin.style.display = 'none'
+        room.style.display = 'none'
+        room1.style.display = 'none'
+        room2.style.display = 'none'
+        back.style.display ='none'
+        var co = document.getElementById('co')
+        var ci = document.getElementById('ci')
+        
+        
+        function book() {
+
+            btn.style.display = 'none'
+            checkin.style.display = ''
+            back.style.display = 'none'
+            disp.style.display = 'none'
+        }
+
+        function confirme() {
+            var reserve = document.getElementById('reserve')
+            reserve.style.display = 'none'
+            checkin.style.display = 'none'
+            room.style.display = ''
+            room1.style.display = ''
+            room2.style.display = ''
+            btn.style.display = 'none'
+            back.style.display = ''
+            co = co.value
+            ci = ci.value
+            const date1  = new Date (co)
+            const date2  = new Date (ci)
+            const aday = 24*60*60*1000
+            var diff = Math.round(Math.abs((date1 -date2)/aday))
+
+            return diff;
+           
+
+        }
+        function book0() {
+            co.innerHTML = document.getElementById('co').value
+            disp.innerHTML = document.getElementById('name').value
+            room.style.display = 'none'
+            room1.style.display = 'none'
+            room2.style.display = 'none'
+            disp.style.display = ''
+            co.style.display = ''
+            difference.style.display = ''
+        } 
+        
+        function book0() {
+            disp.innerHTML = document.getElementById('name').value
+            
+            room.style.display = 'none'
+            room1.style.display = 'none'
+            room2.style.display = 'none'
+        }
+        function book0() {
+            disp.innerHTML = document.getElementById('name').value
+
+            room.style.display = 'none'
+            room1.style.display = 'none'
+            room2.style.display = 'none'
+            disp.style.display = ''
+        }
+        function bak(){
+            checkin.style.display = ''
+           
+            room.style.display = 'none'
+            reserve.style.display = ''
+
+            
+
           
-           
+        }
 
-        <div class="room" >
-               
-            <div class="ima3"></div>
-        <div class="content">
-            <h3>DOUBLE SUITE</h3>
-     King size bed, breakfast in bed, free massage <P>$ 350</P>
-        <div class="btn2"><button class="but" >BOOK</button></div>
-                      </div>          
-    </div>
-
-    <div class="room" >
-               
-        <div class="ima1"></div>
-    <div class="content">
-        <h3>STANDARD SUITE</h3>
- King size bed, breakfast in bed, free massage <P>$ 200</P>
-    <div class="btn2"><button class="but" >BOOK</button></div>
-                  </div>          
-</div>
-
-
-      
-           
-      
-            
-      
-          
-           
-</div>
-
-
-      
-           
-      
-            
-        </div>
-    </div>
-    </div>
-    <div class="footi">copyright © ananse22021</div>
-   
-    <script src="bookfx.js"></script>
+    </script>
 </body>
+
 </html>
